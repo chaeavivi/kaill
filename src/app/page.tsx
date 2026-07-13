@@ -24,7 +24,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container-x">
           <div className="flex items-end justify-between">
-            <SectionHeading eyebrow="Dispatch" title="출강 분야" desc="현장에 바로 적용되는 실무 중심 교육을 제공합니다." />
+            <SectionHeading eyebrow="Programs" title="출강 분야" desc="현장에 바로 적용되는 실무 중심 교육을 제공합니다." />
             <Link href="/dispatch/" className="hidden text-sm font-medium text-navy-500 hover:text-accent-dark sm:block">
               전체 보기 →
             </Link>
@@ -68,7 +68,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8">
             <Link href="/dispatch/#inquiry" className="btn-primary">
-              출강·파견 문의하기 →
+              출강 문의하기 →
             </Link>
           </div>
         </div>
@@ -110,8 +110,8 @@ export default function HomePage() {
       {/* 하단 CTA — 출강 강조 */}
       <CtaBanner
         title="AI 교육 강사가 필요하신가요?"
-        desc="검증된 협회 강사를 기업·기관에 출강·파견해 드립니다."
-        ctaLabel="출강·파견 문의하기"
+        desc="검증된 협회 강사를 기업·기관에 연결해 드립니다."
+        ctaLabel="출강 문의하기"
         ctaHref="/dispatch/#inquiry"
       />
     </>

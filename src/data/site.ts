@@ -5,7 +5,7 @@ export const site = {
   shortName: 'KAILL',
   tagline: '검증된 AI 교육 강사를 양성하고, 기업·기관에 연결하는 협회',
   description:
-    '한국AI평생교육협회는 검증된 AI 교육 강사를 기업·공공기관·학교에 출강·파견하고, 강사양성과정을 통해 현장에 투입 가능한 강사를 배출합니다.',
+    '한국AI평생교육협회는 검증된 AI 교육 강사를 기업·공공기관·학교에 출강 연계하고, 강사양성과정을 통해 현장에 투입 가능한 강사를 배출합니다.',
   // NAP (Name / Address / Phone) — SEO·지역검색 신뢰 신호
   representative: '홍길동', // TODO: 실제 대표자명
   phone: '02-0000-0000', // TODO: 실제 대표 전화

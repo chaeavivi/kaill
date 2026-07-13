@@ -27,7 +27,7 @@ export default function Hero() {
           {/* 이중 CTA — 주: 출강(수요) / 부: 강사양성(공급) */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link href="/dispatch/#inquiry" className="btn-primary">
-              출강·파견 문의 →
+              출강 문의 →
             </Link>
             <Link
               href="/training/"

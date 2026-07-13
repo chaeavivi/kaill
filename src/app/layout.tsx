@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: site.description,
   keywords: [
     'AI 강사 출강',
-    'AI 교육 강사 파견',
+    'AI 교육 강사 섭외',
     '기업 AI 교육',
     '생성형 AI 강의',
     'AI 강사양성과정',

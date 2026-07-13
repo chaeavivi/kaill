@@ -12,5 +12,5 @@ export const mission: { title: string; desc: string }[] = [
 
 export const history: { year: string; events: string[] }[] = [
   { year: '2026', events: ['강사양성과정 정규 기수 운영', '기업·공공기관 출강 확대'] },
-  { year: '2025', events: ['협회 설립 및 출강·파견 사업 본격화', '대표 강사진 대기업 다수 출강'] },
+  { year: '2025', events: ['협회 설립 및 출강 사업 본격화', '대표 강사진 기업·기관 다수 출강'] },
 ];
