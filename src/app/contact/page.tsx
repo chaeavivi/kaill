@@ -25,10 +25,6 @@ export default function ContactPage() {
           {/* 협회 정보 */}
           <div className="mt-12 grid gap-4 rounded-lg border border-navy-100 bg-navy-50 p-6 sm:grid-cols-3">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-accent-dark">협회명</div>
-              <p className="mt-1 text-sm text-navy-800">{site.name}</p>
-            </div>
-            <div>
               <div className="text-xs font-semibold uppercase tracking-wider text-accent-dark">협회장</div>
               <p className="mt-1 text-sm text-navy-800">{site.representative}</p>
             </div>
@@ -36,6 +32,28 @@ export default function ContactPage() {
               <div className="text-xs font-semibold uppercase tracking-wider text-accent-dark">고유번호</div>
               <p className="mt-1 text-sm text-navy-800">{site.regNumber}</p>
             </div>
+            {site.phone && (
+              <div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-accent-dark">전화</div>
+                <a href={`tel:${site.phone.replace(/-/g, '')}`} className="mt-1 block text-sm text-navy-800">
+                  {site.phone}
+                </a>
+              </div>
+            )}
+            {site.email && (
+              <div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-accent-dark">이메일</div>
+                <a href={`mailto:${site.email}`} className="mt-1 block text-sm text-navy-800">
+                  {site.email}
+                </a>
+              </div>
+            )}
+            {site.address && (
+              <div className="sm:col-span-2">
+                <div className="text-xs font-semibold uppercase tracking-wider text-accent-dark">주소</div>
+                <p className="mt-1 text-sm text-navy-800">{site.address}</p>
+              </div>
+            )}
           </div>
         </div>
       </section>
