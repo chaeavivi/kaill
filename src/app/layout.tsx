@@ -32,21 +32,24 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-// Organization 구조화 데이터 (SEO/GEO)
+// Organization 구조화 데이터 (SEO/GEO) — 값이 있는 연락처 항목만 포함
 const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: site.name,
   description: site.description,
   url: site.url,
-  email: site.email,
-  telephone: site.phone,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: '서울',
-    addressCountry: 'KR',
-    streetAddress: site.address,
-  },
+  ...(site.email ? { email: site.email } : {}),
+  ...(site.phone ? { telephone: site.phone } : {}),
+  ...(site.address
+    ? {
+        address: {
+          '@type': 'PostalAddress',
+          addressCountry: 'KR',
+          streetAddress: site.address,
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

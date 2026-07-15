@@ -44,12 +44,12 @@ export default function Hero() {
         <div className="container-x flex flex-col gap-5 py-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex gap-8">
             <div>
-              <div className="text-xl font-semibold text-accent-light">18년+</div>
-              <div className="mt-0.5 text-xs text-navy-400">대표 강사 강의 경력</div>
+              <div className="text-xl font-semibold text-accent-light">400+</div>
+              <div className="mt-0.5 text-xs text-navy-400">AI 강의 수강생</div>
             </div>
             <div>
-              <div className="text-xl font-semibold text-accent-light">30+</div>
-              <div className="mt-0.5 text-xs text-navy-400">기업·기관 출강</div>
+              <div className="text-xl font-semibold text-accent-light">18년+</div>
+              <div className="mt-0.5 text-xs text-navy-400">대표 강사 강의 경력</div>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
