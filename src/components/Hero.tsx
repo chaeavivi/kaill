@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { clientLogos } from '@/data/records';
+import { stats } from '@/data/records';
 
 // 홈 히어로 — 딥네이비 도트그리드 + 에디토리얼 타이포 + 이중 CTA.
 // 출강(수요)에 시각적 무게를 둔다.
@@ -39,24 +39,15 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 실적 스트립 — 경력 지표 + 대표 기관 */}
+      {/* 실적 스트립 — 핵심 지표 한 줄 요약 */}
       <div className="border-t border-hairline bg-navy-950">
-        <div className="container-x flex flex-col gap-5 py-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex gap-8">
-            <div>
-              <div className="text-xl font-semibold text-accent-light">400+</div>
-              <div className="mt-0.5 text-xs text-navy-400">AI 강의 수강생</div>
-            </div>
-            <div>
-              <div className="text-xl font-semibold text-accent-light">6개사</div>
-              <div className="mt-0.5 text-xs text-navy-400">AI 마케팅 운영 중</div>
-            </div>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            {clientLogos.slice(0, 5).map((name) => (
-              <span key={name} className="text-sm font-medium text-navy-200">
-                {name}
-              </span>
+        <div className="container-x py-5">
+          <div className="grid grid-cols-3 divide-x divide-hairline">
+            {stats.slice(0, 3).map((s) => (
+              <div key={s.label} className="px-2 text-center">
+                <div className="text-lg font-semibold text-accent-light sm:text-xl">{s.value}</div>
+                <div className="mt-0.5 text-[11px] text-navy-400 sm:text-xs">{s.label}</div>
+              </div>
             ))}
           </div>
         </div>

@@ -22,6 +22,6 @@ export const instructors: Instructor[] = [
     role: '부회장 · 1세대 생성형 AI 교육 강사',
     expertise: ['생성형 AI 활용', '강사 브랜딩·마케팅', '컬러·심리 웰니스'],
     bio: 'ChatGPT 3.5 출시(2022년)부터 활용해 온 1세대 AI 교육 강사. 생성형 AI 활용부터 강사 브랜딩·콘텐츠 마케팅까지 폭넓게 다룹니다. AI 활용교육전문가 1·2급 · Google Certified Educator Level 1. 원주채아힐링센터 대표.',
-    records: ['생성형 AI 챗봇 자동화 워크샵 1·2기', '캔바 PPT AI 활용 강의', '소상공인 AI·스레드 활용 특강'],
+    records: ['한국폴리텍대학 AI 강사', '생성형 AI 챗봇 자동화 워크샵 1·2기', '소상공인 AI·스레드 활용 특강'],
   },
 ];
