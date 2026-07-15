@@ -34,22 +34,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 연락처 (NAP) */}
+          {/* 협회 정보 (NAP) — 비어 있는 항목은 자동 숨김 */}
           <div>
-            <h3 className="text-sm font-semibold text-white">연락처</h3>
+            <h3 className="text-sm font-semibold text-white">협회 정보</h3>
             <ul className="mt-4 space-y-2 text-sm text-navy-300">
-              <li>대표자 · {site.representative}</li>
-              <li>
-                <a href={`tel:${site.phone.replace(/-/g, '')}`} className="hover:text-white">
-                  {site.phone}
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${site.email}`} className="hover:text-white">
-                  {site.email}
-                </a>
-              </li>
-              <li>{site.address}</li>
+              <li>협회장 · {site.representative}</li>
+              <li>고유번호 · {site.regNumber}</li>
+              {site.phone && (
+                <li>
+                  <a href={`tel:${site.phone.replace(/-/g, '')}`} className="hover:text-white">
+                    {site.phone}
+                  </a>
+                </li>
+              )}
+              {site.email && (
+                <li>
+                  <a href={`mailto:${site.email}`} className="hover:text-white">
+                    {site.email}
+                  </a>
+                </li>
+              )}
+              {site.address && <li>{site.address}</li>}
+              <li className="pt-1 text-xs text-navy-400">문의는 상단 문의 폼을 이용해 주세요.</li>
             </ul>
           </div>
         </div>
@@ -59,8 +65,9 @@ export default function Footer() {
           ⚠️ {CERT_DISCLAIMER}
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-6 text-xs text-navy-400">
-          © {site.name}. All rights reserved.
+        <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-navy-400 sm:flex-row sm:items-center sm:justify-between">
+          <span>© {site.name}. All rights reserved.</span>
+          <span>본 사이트는 클로드 AI를 활용해 제작되었습니다.</span>
         </div>
       </div>
     </footer>
