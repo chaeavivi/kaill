@@ -48,8 +48,8 @@ export default function Hero() {
               <div className="mt-0.5 text-xs text-navy-400">AI 강의 수강생</div>
             </div>
             <div>
-              <div className="text-xl font-semibold text-accent-light">18년+</div>
-              <div className="mt-0.5 text-xs text-navy-400">대표 강사 강의 경력</div>
+              <div className="text-xl font-semibold text-accent-light">6개사</div>
+              <div className="mt-0.5 text-xs text-navy-400">AI 마케팅 운영 중</div>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
