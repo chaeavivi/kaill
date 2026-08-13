@@ -6,7 +6,7 @@ import TrainingForm from '@/components/forms/TrainingForm';
 import GeneralForm from '@/components/forms/GeneralForm';
 
 const tabs = [
-  { key: 'dispatch', label: 'B2B 출강 문의', desc: '기업·기관 강사 출강 문의 (최우선)' },
+  { key: 'dispatch', label: 'B2B 출강 문의', desc: '기업·기관 강사 출강 문의' },
   { key: 'training', label: '강사양성과정 문의', desc: '과정 신청 및 모집 관련 문의' },
   { key: 'general', label: '일반 · 제휴 문의', desc: '제휴·협력 및 기타 문의' },
 ] as const;
