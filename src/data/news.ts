@@ -24,7 +24,7 @@ export type NewsItem = {
   body?: NewsBlock[]; // 있으면 상세 페이지 생성
 };
 
-export const news: NewsItem[] = [
+const NEWS: NewsItem[] = [
   {
     id: 'column-solo-business',
     category: '칼럼',
@@ -115,7 +115,7 @@ export const news: NewsItem[] = [
     deck: '○○정신건강복지센터 AI 활용 교육 후기',
     excerpt:
       '상담이 본업인데 하루의 절반이 문서인 현장. 신기한 AI 시연이 아니라 ‘책상 위 그 문서’를 줄이는 교육으로, 제미나이 실무 활용을 6회에 걸쳐 진행했습니다.',
-    date: '2026-06-27',
+    date: '2026-07-16',
     author: '정경 · 한국AI평생교육협회 협회장',
     cover: '/news/mental-health.jpg',
     coverCaption: '○○정신건강복지센터 AI 활용 교육 현장',
@@ -251,5 +251,8 @@ export const news: NewsItem[] = [
     date: '2026-04-28',
   },
 ];
+
+// 최신 날짜순(내림차순)으로 정렬해 노출
+export const news: NewsItem[] = [...NEWS].sort((a, b) => (a.date < b.date ? 1 : -1));
 
 export const newsCategories: NewsCategory[] = ['공지', '출강소식', '칼럼'];
