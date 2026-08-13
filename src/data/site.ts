@@ -12,7 +12,7 @@ export const site = {
   email: 'tksgk22@naver.com' as string,
   address: '강원특별자치도 원주시 입춘로 45, A동 6층' as string,
   // 사이트 배포 후 실제 도메인으로 교체 (JSON-LD·OG에 사용)
-  url: 'https://www.kaill.or.kr',
+  url: 'https://www.kailea.kr',
   social: {
     instagram: '',
     blog: '',
@@ -27,7 +27,7 @@ export const site = {
 // 설정 방법: docs/문의폼-구글연동-설정.md 참고.
 // 비워두면(''): 실제 전송 없이 성공 화면만 표시하는 데모 상태로 동작합니다.
 // ─────────────────────────────────────────────────────────────────────────
-export const INQUIRY_ENDPOINT = '';
+export const INQUIRY_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz_IwJu2t7y4PmDMBT5KtKMRIImwO-ptSGvaJjJ3XNWmaLfixLg5aAdOf3LO_Od2E3GcA/exec';
 
 // 발급물 성격 고지 문구 (소비자 오인 방지 — 푸터·강사양성 페이지 공용)
 export const CERT_DISCLAIMER =
