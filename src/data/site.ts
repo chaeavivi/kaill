@@ -8,7 +8,7 @@ export const site = {
   representative: '정경', // 협회장
   regNumber: '601-82-81762', // 고유번호
   // 연락처 — 값이 있으면 푸터·문의 페이지·구조화 데이터에 자동 노출됩니다.
-  phone: '010-9527-6345' as string,
+  phone: '010-9727-6345' as string,
   email: 'kaileakr@gmail.com' as string,
   address: '강원특별자치도 원주시 입춘로 45, A동 6층' as string,
   // 사이트 배포 후 실제 도메인으로 교체 (JSON-LD·OG에 사용)
