@@ -20,6 +20,17 @@ export default function InstructorCard({ instructor }: { instructor: Instructor 
 
       <p className="mt-4 text-sm leading-relaxed text-navy-500">{instructor.bio}</p>
 
+      {instructor.highlights && instructor.highlights.length > 0 && (
+        <ul className="mt-4 space-y-1.5">
+          {instructor.highlights.map((h) => (
+            <li key={h} className="flex gap-2 text-sm leading-snug text-navy-700">
+              <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden />
+              <span>{h}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
       <div className="mt-4 flex flex-wrap gap-1.5">
         {instructor.expertise.map((e) => (
           <span key={e} className="rounded-md bg-accent/10 px-2 py-1 text-xs font-medium text-accent-dark">
