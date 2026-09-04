@@ -73,7 +73,8 @@ export const instructors: Instructor[] = [
     bio: '평생교육원·대학·초등 현장에서 SW·코딩·디지털 교육을 폭넓게 수행해 온 교육 전문가입니다.',
     highlights: [
       'KT AICE FUTURE 1급',
-      '코딩지도사 1급',
+      'KT 인공지능코딩지도사',
+      'COS 1급 · 코딩지도사 1급',
       '평생교육·아동 SW 교육 전문',
     ],
     records: ['강원SW미래채움 SW 강사', '디지털새싹(강원대·호서대) 강사', 'KT 와이즈 SW 강사'],
