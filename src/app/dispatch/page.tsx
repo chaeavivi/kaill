@@ -3,10 +3,9 @@ import PageHero from '@/components/PageHero';
 import SectionHeading from '@/components/SectionHeading';
 import TopicCard from '@/components/TopicCard';
 import ProcessSteps from '@/components/ProcessSteps';
-import InstructorCard from '@/components/InstructorCard';
+import InstructorGrid from '@/components/InstructorGrid';
 import InquiryForm from '@/components/forms/InquiryForm';
 import { dispatchTopics, dispatchAudiences } from '@/data/dispatchTopics';
-import { instructors } from '@/data/instructors';
 import { testimonials } from '@/data/records';
 
 export const metadata: Metadata = {
@@ -77,10 +76,8 @@ export default function DispatchPage() {
             title="강사진 소개"
             desc="대기업·공공기관 출강 이력을 갖춘 검증된 강사진."
           />
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {instructors.map((ins) => (
-              <InstructorCard key={ins.name} instructor={ins} />
-            ))}
+          <div className="mt-10">
+            <InstructorGrid />
           </div>
         </div>
       </section>

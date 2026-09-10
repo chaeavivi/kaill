@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import PageHero from '@/components/PageHero';
 import SectionHeading from '@/components/SectionHeading';
-import InstructorCard from '@/components/InstructorCard';
+import InstructorGrid from '@/components/InstructorGrid';
 import { greeting, mission, history } from '@/data/about';
-import { instructors } from '@/data/instructors';
 
 export const metadata: Metadata = {
   title: '협회 소개',
@@ -60,10 +59,8 @@ export default function AboutPage() {
             title="조직 · 대표 강사진"
             desc="대기업·공공기관 출강 이력을 갖춘 검증된 강사진이 협회를 이끕니다."
           />
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {instructors.map((ins) => (
-              <InstructorCard key={ins.name} instructor={ins} />
-            ))}
+          <div className="mt-10">
+            <InstructorGrid />
           </div>
         </div>
       </section>
