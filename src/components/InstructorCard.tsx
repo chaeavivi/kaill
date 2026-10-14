@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Instructor } from '@/data/instructors';
 
 // 이름 이니셜 아바타 (프로필 이미지 없을 때)
@@ -9,9 +10,19 @@ export default function InstructorCard({ instructor }: { instructor: Instructor 
   return (
     <div className="card flex h-full flex-col">
       <div className="flex items-center gap-4">
-        <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-navy-900 text-xl font-bold text-accent">
-          {initials(instructor.name)}
-        </div>
+        {instructor.photo ? (
+          <Image
+            src={instructor.photo}
+            alt={instructor.name}
+            width={56}
+            height={56}
+            className="h-14 w-14 shrink-0 rounded-full object-cover"
+          />
+        ) : (
+          <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-navy-900 text-xl font-bold text-accent">
+            {initials(instructor.name)}
+          </div>
+        )}
         <div>
           <h3 className="text-lg font-bold text-navy-950">{instructor.name}</h3>
           <p className="text-sm text-accent-dark">{instructor.role}</p>
