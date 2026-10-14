@@ -58,7 +58,6 @@ export const instructors: Instructor[] = [
     role: 'AI 정규과정 수석 강사',
     expertise: ['12주 정규과정 운영', 'AI 블로그 수익화·SEO', 'AI 업무 적용 교육', 'LMS·시스템 개발'],
     bio: '2020년부터 생성형 AI 정규과정을 운영해 온 실습형 강사. 개발자 출신으로 도구 사용법이 아니라 \u201c내 일의 어느 지점에 AI를 넣을 것인가\u201d를 기준으로 수업을 설계합니다.',
-    photo: '/instructors/yoon-youngho.jpg',
     highlights: [
       'YoonSmmA Co. 대표 · 자영업자 AI 마케팅 컨설팅',
       'AICE Generative 1급 (2026)',
