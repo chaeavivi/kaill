@@ -29,6 +29,30 @@ export type NewsItem = {
 
 const NEWS: NewsItem[] = [
   {
+    id: 'press-enewstoday-polytech-mou',
+    category: '언론보도',
+    title: '폴리텍 원주캠퍼스·한국AI평생교육협회, AI 인재양성 협력',
+    excerpt:
+      '한국AI평생교육협회와 한국폴리텍대학 원주캠퍼스가 「AI 정책 연계 지역 맞춤형 인재양성」을 위한 업무협약을 체결했습니다.',
+    date: '2026-09-14',
+    source: '이뉴스투데이',
+    sourceUrl: 'https://www.enewstoday.co.kr/news/articleView.html?idxno=2470255',
+    cover: '/news/polytech-mou.jpg',
+    coverCaption: '2026. 9. 14. 한국폴리텍대학 원주캠퍼스 본관 가치창조실에서 열린 업무협약식',
+  },
+  {
+    id: 'press-kcnews-polytech-mou',
+    category: '언론보도',
+    title: '한국AI평생교육협회·폴리텍 원주캠퍼스, 지역 AI 인재양성 협력 협약',
+    excerpt:
+      'AI 정책과 연계한 지역 맞춤형 인재양성을 위해 한국AI평생교육협회와 한국폴리텍대학 원주캠퍼스가 손을 잡았습니다.',
+    date: '2026-09-14',
+    source: 'KCN뉴스',
+    sourceUrl: 'https://kcnews.kr/boards/2616/view?referer=%252Fpages%252Fissue',
+    cover: '/news/polytech-mou.jpg',
+    coverCaption: '2026. 9. 14. 한국폴리텍대학 원주캠퍼스 본관 가치창조실에서 열린 업무협약식',
+  },
+  {
     id: 'column-lifelong',
     category: '칼럼',
     title: "전 세대의 AI: 협회 이름에 ‘평생교육’을 넣은 이유",
