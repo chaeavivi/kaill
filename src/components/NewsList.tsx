@@ -5,7 +5,11 @@ import NewsCard from '@/components/NewsCard';
 import { news, newsCategories, type NewsCategory } from '@/data/news';
 
 type Filter = '전체' | NewsCategory;
-const filters: Filter[] = ['전체', ...newsCategories];
+// 항목이 하나도 없는 카테고리는 탭을 숨깁니다.
+const filters: Filter[] = [
+  '전체',
+  ...newsCategories.filter((c) => news.some((n) => n.category === c)),
+];
 
 export default function NewsList() {
   const [active, setActive] = useState<Filter>('전체');

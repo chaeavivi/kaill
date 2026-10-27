@@ -1,6 +1,7 @@
-// 소식·활동 (공지 / 활동·출강 소식 / 칼럼).
+// 소식·활동 (공지 / 언론보도 / 활동·출강 소식 / 칼럼).
 // body가 있는 항목은 상세 페이지(/news/[id])로 열립니다.
-export type NewsCategory = '공지' | '출강소식' | '칼럼';
+// body 없이 sourceUrl만 있는 항목(언론보도)은 원문 기사로 바로 연결됩니다.
+export type NewsCategory = '공지' | '언론보도' | '출강소식' | '칼럼';
 
 // 본문 블록: 문단 / 소제목 / 인용 / 문의 유도(CTA)
 export type NewsBlock =
@@ -22,6 +23,8 @@ export type NewsItem = {
   coverContain?: boolean; // 세로형(책표지 등)이면 true → 잘림 없이 표시
   coverCaption?: string; // 이미지 설명 (선택)
   body?: NewsBlock[]; // 있으면 상세 페이지 생성
+  source?: string; // 언론사명 (예: 'KCN뉴스')
+  sourceUrl?: string; // 원문 기사 링크 — 있으면 '원문 기사 보기'로 연결
 };
 
 const NEWS: NewsItem[] = [
@@ -783,4 +786,4 @@ const NEWS: NewsItem[] = [
 // 최신 날짜순(내림차순)으로 정렬해 노출
 export const news: NewsItem[] = [...NEWS].sort((a, b) => (a.date < b.date ? 1 : -1));
 
-export const newsCategories: NewsCategory[] = ['공지', '출강소식', '칼럼'];
+export const newsCategories: NewsCategory[] = ['공지', '언론보도', '출강소식', '칼럼'];

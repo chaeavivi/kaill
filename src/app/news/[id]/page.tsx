@@ -19,6 +19,7 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
 
 const badgeStyle: Record<string, string> = {
   공지: 'bg-navy-100 text-navy-700',
+  언론보도: 'bg-amber-100 text-amber-800',
   출강소식: 'bg-accent/12 text-accent-dark',
   칼럼: 'bg-navy-50 text-navy-600 ring-1 ring-inset ring-navy-200',
 };
@@ -76,6 +77,20 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
         {item.deck && <p className="mt-2 text-base font-semibold text-navy-600">{item.deck}</p>}
         {item.author && (
           <p className="mt-4 border-b-2 border-navy-200 pb-6 text-sm text-navy-500">{item.author}</p>
+        )}
+        {item.sourceUrl && (
+          <p className="mt-4 border-b-2 border-navy-200 pb-6 text-sm text-navy-500">
+            {item.source && <span className="font-medium text-navy-700">{item.source}</span>}
+            {item.source && ' · '}
+            <a
+              href={item.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-accent-dark underline underline-offset-2 hover:text-accent"
+            >
+              원문 기사 보기 ↗
+            </a>
+          </p>
         )}
 
         {item.cover && (

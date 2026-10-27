@@ -4,12 +4,15 @@ import type { NewsItem } from '@/data/news';
 
 const categoryStyle: Record<string, string> = {
   공지: 'bg-navy-100 text-navy-700',
+  언론보도: 'bg-amber-100 text-amber-800',
   출강소식: 'bg-accent/12 text-accent-dark',
   칼럼: 'bg-navy-50 text-navy-600',
 };
 
 export default function NewsCard({ item }: { item: NewsItem }) {
   const hasArticle = !!(item.body && item.body.length);
+  // 본문 없이 원문 링크만 있는 항목(언론보도)은 기사 원문으로 바로 연결
+  const external = !hasArticle && !!item.sourceUrl;
 
   const inner = (
     <article className="card group flex h-full flex-col hover:border-accent/40">
@@ -41,6 +44,9 @@ export default function NewsCard({ item }: { item: NewsItem }) {
           {item.category}
         </span>
         <time className="text-xs text-navy-400">{item.date}</time>
+        {item.source && (
+          <span className="text-xs font-medium text-navy-400">· {item.source}</span>
+        )}
       </div>
       <h3 className="mt-3 text-base font-semibold leading-snug text-navy-950 group-hover:text-accent-dark">
         {item.title}
@@ -49,14 +55,33 @@ export default function NewsCard({ item }: { item: NewsItem }) {
       {hasArticle && (
         <span className="mt-4 text-sm font-medium text-accent-dark">자세히 보기 →</span>
       )}
+      {external && (
+        <span className="mt-4 text-sm font-medium text-accent-dark">원문 기사 보기 ↗</span>
+      )}
     </article>
   );
 
-  return hasArticle ? (
-    <Link href={`/news/${item.id}/`} className="block h-full">
-      {inner}
-    </Link>
-  ) : (
-    inner
-  );
+  if (hasArticle) {
+    return (
+      <Link href={`/news/${item.id}/`} className="block h-full">
+        {inner}
+      </Link>
+    );
+  }
+
+  if (external) {
+    return (
+      <a
+        href={item.sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block h-full"
+        aria-label={`${item.title} — 원문 기사 보기 (새 창)`}
+      >
+        {inner}
+      </a>
+    );
+  }
+
+  return inner;
 }
