@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { navItems } from '@/data/nav';
 import { site, CERT_DISCLAIMER } from '@/data/site';
+import SocialLinks from '@/components/SocialLinks';
 
 export default function Footer() {
   return (
@@ -18,6 +19,16 @@ export default function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-navy-300">
               {site.tagline}
             </p>
+
+            {/* SNS 채널 */}
+            <div className="mt-6">
+              <h3 className="text-xs font-semibold uppercase tracking-wide text-navy-400">
+                SNS 채널
+              </h3>
+              <div className="mt-3">
+                <SocialLinks variant="footer" showHandle />
+              </div>
+            </div>
           </div>
 
           {/* 바로가기 */}

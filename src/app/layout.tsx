@@ -33,6 +33,8 @@ export const metadata: Metadata = {
 };
 
 // Organization 구조화 데이터 (SEO/GEO) — 값이 있는 연락처 항목만 포함
+const sameAs = Object.values(site.social).filter(Boolean);
+
 const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -50,6 +52,8 @@ const orgJsonLd = {
         },
       }
     : {}),
+  // SNS 채널 (공식 계정 연결 — 검색엔진·AI 답변의 동일 주체 인식에 사용)
+  ...(sameAs.length > 0 ? { sameAs } : {}),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

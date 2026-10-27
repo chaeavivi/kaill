@@ -13,10 +13,11 @@ export const site = {
   address: '강원특별자치도 원주시 입춘로 45, A동 6층' as string,
   // 사이트 배포 후 실제 도메인으로 교체 (JSON-LD·OG에 사용)
   url: 'https://www.kailea.kr',
+  // SNS 채널 — 값이 있으면 헤더·푸터에 자동 노출됩니다. (빈 값은 숨김)
   social: {
-    instagram: '',
-    blog: '',
-    youtube: '',
+    youtube: 'https://www.youtube.com/@kaileakr' as string,
+    instagram: 'https://www.instagram.com/kailea_edu' as string,
+    blog: '' as string,
   },
 } as const;
 

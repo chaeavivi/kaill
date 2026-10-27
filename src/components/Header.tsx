@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { navItems, primaryCta } from '@/data/nav';
 import { site } from '@/data/site';
+import SocialLinks from '@/components/SocialLinks';
 
 export default function Header() {
   const pathname = usePathname();
@@ -50,6 +51,10 @@ export default function Header() {
 
         {/* 우측 CTA + 모바일 토글 */}
         <div className="flex items-center gap-2">
+          {/* SNS (데스크톱) */}
+          <div className="hidden lg:block">
+            <SocialLinks variant="header" />
+          </div>
           <Link href={primaryCta.href} className="hidden btn-primary !px-4 !py-2 !text-sm sm:inline-flex">
             {primaryCta.label}
           </Link>
@@ -87,6 +92,11 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+
+            {/* SNS (모바일) */}
+            <div className="mt-2 border-t border-navy-100 px-2 pb-2 pt-4">
+              <SocialLinks variant="header" />
+            </div>
           </div>
         </nav>
       )}
