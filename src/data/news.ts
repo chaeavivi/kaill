@@ -34,7 +34,7 @@ const NEWS: NewsItem[] = [
     title: '폴리텍 원주캠퍼스·한국AI평생교육협회, AI 인재양성 협력',
     excerpt:
       '한국AI평생교육협회와 한국폴리텍대학 원주캠퍼스가 「AI 정책 연계 지역 맞춤형 인재양성」을 위한 업무협약을 체결했습니다.',
-    date: '2026-09-14',
+    date: '2026-09-14', // 보도일 = 협약 체결 당일
     source: '이뉴스투데이',
     sourceUrl: 'https://www.enewstoday.co.kr/news/articleView.html?idxno=2470255',
     cover: '/news/polytech-mou.jpg',
@@ -46,7 +46,7 @@ const NEWS: NewsItem[] = [
     title: '한국AI평생교육협회·폴리텍 원주캠퍼스, 지역 AI 인재양성 협력 협약',
     excerpt:
       'AI 정책과 연계한 지역 맞춤형 인재양성을 위해 한국AI평생교육협회와 한국폴리텍대학 원주캠퍼스가 손을 잡았습니다.',
-    date: '2026-09-14',
+    date: '2026-09-15', // 보도일 (협약 체결일은 2026-09-14)
     source: 'KCN뉴스',
     sourceUrl: 'https://kcnews.kr/boards/2616/view?referer=%252Fpages%252Fissue',
     cover: '/news/polytech-mou.jpg',
