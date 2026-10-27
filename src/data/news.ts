@@ -31,6 +31,15 @@ export type NewsItem = {
 
 const NEWS: NewsItem[] = [
   {
+    id: 'video-middle-school-eco-ad',
+    category: '출강소식',
+    title: '중학생들이 AI로 만든 우리 동네 환경 광고 | 중학교 생성형 AI 수업',
+    excerpt:
+      '중학교 생성형 AI 수업에서 학생들이 직접 만든 우리 동네 환경 광고입니다. 기획부터 이미지·영상 제작까지 학생들이 AI 도구로 완성했습니다.',
+    date: '2026-10-02',
+    youtubeId: '7olLBgV9OMY',
+  },
+  {
     id: 'video-canva-ai-corporate',
     category: '출강소식',
     title: '디자이너 없이 홍보물 만들기 | 기업 직무교육 Canva × AI',
