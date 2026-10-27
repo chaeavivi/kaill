@@ -16,18 +16,28 @@ export type NewsItem = {
   category: NewsCategory;
   title: string;
   excerpt: string;
-  date: string; // YYYY-MM-DD
+  date?: string; // YYYY-MM-DD (미상이면 생략 — 목록 맨 앞에 노출)
   author?: string; // 예: '정경 · 한국AI평생교육협회 협회장'
   deck?: string; // 부제 (선택)
   cover?: string; // 대표 이미지 경로 (public 기준, 예: '/news/xxx.jpg')
   coverContain?: boolean; // 세로형(책표지 등)이면 true → 잘림 없이 표시
   coverCaption?: string; // 이미지 설명 (선택)
   body?: NewsBlock[]; // 있으면 상세 페이지 생성
+  youtubeId?: string; // 유튜브 영상 ID — 있으면 상세 페이지에서 바로 재생
+  youtubeWide?: boolean; // 가로형(16:9) 영상이면 true. 기본은 쇼츠(9:16)
   source?: string; // 언론사명 (예: 'KCN뉴스')
   sourceUrl?: string; // 원문 기사 링크 — 있으면 '원문 기사 보기'로 연결
 };
 
 const NEWS: NewsItem[] = [
+  {
+    id: 'video-senior-jobs-genai',
+    category: '출강소식',
+    title: '노인일자리 수행기관 종사자 생성형 AI 실무 특강 현장',
+    excerpt:
+      '노인일자리 수행기관 종사자를 대상으로 진행한 생성형 AI 실무 특강 현장입니다. 실제 업무에 바로 적용할 수 있는 활용법 중심으로 구성했습니다.',
+    youtubeId: 'Vwmrj8wEGi8',
+  },
   {
     id: 'press-enewstoday-polytech-mou',
     category: '언론보도',
@@ -808,6 +818,11 @@ const NEWS: NewsItem[] = [
 ];
 
 // 최신 날짜순(내림차순)으로 정렬해 노출
-export const news: NewsItem[] = [...NEWS].sort((a, b) => (a.date < b.date ? 1 : -1));
+// 최신순. 날짜가 없는 항목(날짜 미상)은 최신으로 보고 맨 앞에 둡니다.
+export const news: NewsItem[] = [...NEWS].sort((a, b) => {
+  const ad = a.date ?? '9999-12-31';
+  const bd = b.date ?? '9999-12-31';
+  return ad < bd ? 1 : ad > bd ? -1 : 0;
+});
 
 export const newsCategories: NewsCategory[] = ['공지', '언론보도', '출강소식', '칼럼'];

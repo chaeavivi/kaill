@@ -3,9 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { news, type NewsBlock } from '@/data/news';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
-// 본문(body)이 있는 항목만 상세 페이지로 생성
-const articles = news.filter((n) => n.body && n.body.length > 0);
+// 본문(body)이 있거나 영상(youtubeId)이 있는 항목을 상세 페이지로 생성
+const articles = news.filter((n) => (n.body && n.body.length > 0) || n.youtubeId);
 
 export function generateStaticParams() {
   return articles.map((n) => ({ id: n.id }));
@@ -53,9 +54,9 @@ function Block({ block }: { block: NewsBlock }) {
 
 export default function NewsDetailPage({ params }: { params: { id: string } }) {
   const item = news.find((n) => n.id === params.id);
-  if (!item || !item.body) notFound();
+  if (!item || !((item.body && item.body.length) || item.youtubeId)) notFound();
 
-  const dateFmt = item.date.replace(/-/g, '. ') + '.';
+  const dateFmt = item.date ? item.date.replace(/-/g, '. ') + '.' : null;
 
   return (
     <article className="section">
@@ -68,7 +69,7 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
           <span className={`rounded px-2 py-0.5 text-xs font-medium ${badgeStyle[item.category]}`}>
             {item.category}
           </span>
-          <time className="text-xs text-navy-400">{dateFmt}</time>
+          {dateFmt && <time className="text-xs text-navy-400">{dateFmt}</time>}
         </div>
 
         <h1 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-navy-950 [text-wrap:balance] sm:text-[40px]">
@@ -91,6 +92,12 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
               원문 기사 보기 ↗
             </a>
           </p>
+        )}
+
+        {item.youtubeId && (
+          <div className="mt-8">
+            <YouTubeEmbed id={item.youtubeId} title={item.title} wide={item.youtubeWide} />
+          </div>
         )}
 
         {item.cover && (
@@ -122,13 +129,21 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
           </figure>
         )}
 
-        <div className="mt-8 text-[17px]">
-          {item.body.map((block, i) => (
-            <Block key={i} block={block} />
-          ))}
-        </div>
+        {/* 본문이 없는 항목(영상 등)은 요약문을 안내 문단으로 표시 */}
+        {!(item.body && item.body.length > 0) && item.excerpt && (
+          <p className="mt-8 text-[17px] leading-relaxed text-navy-700">{item.excerpt}</p>
+        )}
 
-        {/* 저자 · 협회 소개 */}
+        {item.body && item.body.length > 0 && (
+          <div className="mt-8 text-[17px]">
+            {item.body.map((block, i) => (
+              <Block key={i} block={block} />
+            ))}
+          </div>
+        )}
+
+        {/* 저자 · 협회 소개 (영상 항목은 개인 저자 표기 없이 CTA만) */}
+        {!item.youtubeId && (
         <div className="mt-12 rounded-xl border border-navy-200 bg-navy-50 p-5">
           <div className="text-sm font-bold text-navy-900">정경 · 한국AI평생교육협회 협회장</div>
           <div className="mt-0.5 text-xs text-navy-500">
@@ -139,6 +154,7 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
             연결하고, 강사양성과정을 통해 현장에 투입 가능한 강사를 배출합니다.
           </p>
         </div>
+        )}
 
         <div className="mt-8">
           <Link href="/contact/" className="btn-primary">
