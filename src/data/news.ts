@@ -31,6 +31,15 @@ export type NewsItem = {
 
 const NEWS: NewsItem[] = [
   {
+    id: 'video-canva-ai-corporate',
+    category: '출강소식',
+    title: '디자이너 없이 홍보물 만들기 | 기업 직무교육 Canva × AI',
+    excerpt:
+      '디자이너 없이도 사내 홍보물을 직접 만드는 기업 직무교육 현장입니다. 캔바와 AI를 함께 써서 기획부터 완성까지 한 번에 끝내는 방법을 다뤘습니다.',
+    date: '2026-10-13',
+    youtubeId: '0-4NL8e_Ww0',
+  },
+  {
     id: 'video-senior-jobs-genai',
     category: '출강소식',
     title: '노인일자리 수행기관 종사자 생성형 AI 실무 특강 현장',
