@@ -56,7 +56,7 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
   const item = news.find((n) => n.id === params.id);
   if (!item || !((item.body && item.body.length) || item.youtubeId)) notFound();
 
-  const dateFmt = item.date ? item.date.replace(/-/g, '. ') + '.' : null;
+  const dateFmt = item.dateLabel ?? (item.date ? item.date.replace(/-/g, '. ') + '.' : null);
 
   return (
     <article className="section">

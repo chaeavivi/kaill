@@ -16,7 +16,8 @@ export type NewsItem = {
   category: NewsCategory;
   title: string;
   excerpt: string;
-  date?: string; // YYYY-MM-DD (미상이면 생략 — 목록 맨 앞에 노출)
+  date?: string; // YYYY-MM-DD (미상이면 생략 — 목록 맨 앞에 노출). 정렬 기준
+  dateLabel?: string; // 화면에 표시할 날짜 문구 (예: 여러 날에 걸친 과정의 기간)
   author?: string; // 예: '정경 · 한국AI평생교육협회 협회장'
   deck?: string; // 부제 (선택)
   cover?: string; // 대표 이미지 경로 (public 기준, 예: '/news/xxx.jpg')
@@ -30,6 +31,16 @@ export type NewsItem = {
 };
 
 const NEWS: NewsItem[] = [
+  {
+    id: 'video-genai-work-innovation',
+    category: '출강소식',
+    title: '생성형 AI 활용 업무혁신 심화교육 | 문서 자동화부터 앱 만들기까지',
+    excerpt:
+      '3일에 걸친 생성형 AI 업무혁신 심화교육 현장입니다. 문서 자동화에서 시작해 직접 쓸 수 있는 앱을 만드는 단계까지 다뤘습니다.',
+    date: '2026-09-10',
+    dateLabel: '2026-09-10 ~ 12',
+    youtubeId: '26w96vfJHOY',
+  },
   {
     id: 'video-middle-school-eco-ad',
     category: '출강소식',

@@ -50,7 +50,9 @@ export default function NewsCard({ item }: { item: NewsItem }) {
         >
           {item.category}
         </span>
-        {item.date && <time className="text-xs text-navy-400">{item.date}</time>}
+        {(item.dateLabel || item.date) && (
+          <time className="text-xs text-navy-400">{item.dateLabel ?? item.date}</time>
+        )}
         {item.source && (
           <span className="text-xs font-medium text-navy-400">· {item.source}</span>
         )}
