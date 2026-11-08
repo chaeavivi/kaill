@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     url: site.url,
   },
   robots: { index: true, follow: true },
+  // 검색엔진 사이트 소유확인 (네이버 서치어드바이저)
+  verification: {
+    other: { 'naver-site-verification': 'cf87a2bb5cc5ee64933f84b2c404bda4497c8331' },
+  },
 };
 
 // Organization 구조화 데이터 (SEO/GEO) — 값이 있는 연락처 항목만 포함
