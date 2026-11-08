@@ -99,23 +99,22 @@ export default function DispatchPage() {
       </section>
 
       {/* 출강 문의 폼 (최우선 전환) */}
-      <section id="inquiry" className="scroll-mt-20 bg-navy-800 py-16 sm:py-20">
+      <section id="inquiry" className="scroll-mt-28 border-t border-navy-100 bg-navy-50/70 py-16 sm:py-20">
         <div className="container-x grid gap-10 lg:grid-cols-2">
-          <div className="text-white">
-            <div className="rule-accent mb-4" />
-            <span className="eyebrow text-accent-light">Inquiry</span>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">출강 문의하기</h2>
-            <p className="mt-4 max-w-md text-[15px] leading-relaxed text-navy-300">
+          <div>
+            <span className="block text-xs font-bold uppercase tracking-[0.16em] text-accent-dark">Inquiry</span>
+            <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-navy-950 sm:text-[28px]">출강 문의하기</h2>
+            <p className="mt-4 max-w-md text-[15px] leading-relaxed text-navy-500">
               간단한 정보만 남겨주시면 담당자가 영업일 기준 1~2일 내 연락드립니다.
               교육 목적·대상만 알려주셔도 최적의 강사를 매칭해 제안드립니다.
             </p>
-            <ul className="mt-6 space-y-2 text-sm text-navy-200">
+            <ul className="mt-6 space-y-2 text-sm text-navy-700">
               <li>· 강사 섭외·매칭을 협회가 일임</li>
               <li>· 기관 맞춤 커리큘럼 제안</li>
               <li>· 온·오프라인 모두 진행 가능</li>
             </ul>
           </div>
-          <div className="rounded-xl bg-white p-6 sm:p-8">
+          <div className="rounded-xl border border-navy-100 bg-white p-6 shadow-card sm:p-8">
             <InquiryForm />
           </div>
         </div>

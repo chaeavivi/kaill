@@ -149,17 +149,16 @@ export default function TrainingPage() {
       </section>
 
       {/* 신청 폼 */}
-      <section id="apply" className="scroll-mt-20 bg-navy-800 py-16 sm:py-20">
+      <section id="apply" className="scroll-mt-28 border-t border-navy-100 bg-navy-50/70 py-16 sm:py-20">
         <div className="container-x grid gap-10 lg:grid-cols-2">
-          <div className="text-white">
-            <div className="rule-accent mb-4" />
-            <span className="eyebrow text-accent-light">Apply</span>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">과정 문의 · 신청</h2>
-            <p className="mt-4 max-w-md text-[15px] leading-relaxed text-navy-300">
+          <div>
+            <span className="block text-xs font-bold uppercase tracking-[0.16em] text-accent-dark">Apply</span>
+            <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-navy-950 sm:text-[28px]">과정 문의 · 신청</h2>
+            <p className="mt-4 max-w-md text-[15px] leading-relaxed text-navy-500">
               간단히 신청 정보를 남겨주시면 담당자가 모집 일정·비용 등 세부 사항을 안내드립니다.
             </p>
           </div>
-          <div className="rounded-xl bg-white p-6 sm:p-8">
+          <div className="rounded-xl border border-navy-100 bg-white p-6 shadow-card sm:p-8">
             <TrainingForm />
           </div>
         </div>

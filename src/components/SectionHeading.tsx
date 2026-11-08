@@ -17,12 +17,17 @@ export default function SectionHeading({
   const isDark = tone === 'dark';
   return (
     <div className={`${isCenter ? 'mx-auto max-w-2xl text-center' : 'max-w-2xl'}`}>
-      <div className={`rule-accent mb-4 ${isCenter ? 'mx-auto' : ''}`} />
       {eyebrow && (
-        <span className={isDark ? 'eyebrow text-accent-light' : 'eyebrow'}>{eyebrow}</span>
+        <span
+          className={`block text-xs font-bold uppercase tracking-[0.16em] ${
+            isDark ? 'text-accent-light' : 'text-accent-dark'
+          }`}
+        >
+          {eyebrow}
+        </span>
       )}
       <h2
-        className={`mt-2 text-2xl font-semibold tracking-tight sm:text-3xl ${
+        className={`mt-1.5 text-2xl font-bold tracking-tight sm:text-[28px] ${
           isDark ? 'text-white' : 'text-navy-950'
         }`}
       >
