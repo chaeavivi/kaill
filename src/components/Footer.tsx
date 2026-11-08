@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { navItems } from '@/data/nav';
 import { site, CERT_DISCLAIMER } from '@/data/site';
@@ -11,8 +12,9 @@ export default function Footer() {
           {/* 협회 정보 */}
           <div>
             <div className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/10 text-sm font-bold text-accent">
-                AI
+              {/* 어두운 배경에서 로고가 묻히지 않게 흰 바탕 위에 올림 */}
+              <span className="grid h-10 w-10 place-items-center rounded-lg bg-white p-1">
+                <Image src="/logo.png" alt="" width={32} height={27} />
               </span>
               <span className="text-base font-bold text-white">{site.name}</span>
             </div>
