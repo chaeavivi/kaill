@@ -27,8 +27,8 @@ export const careerPaths: string[] = [
 
 // 모집 정보
 export const admission = {
-  cohort: '2026년 하반기 (○기)',
-  schedule: '2026년 9월 개강 (모집 마감 8월 말)',
+  cohort: '추후 공지',
+  schedule: '미정 (확정 시 공지사항으로 안내)',
   tuition: '문의 시 개별 안내', // 결제 시스템 제외 → 문의 후 안내
-  place: '서울 협회 교육장 및 온라인',
+  place: '추후 공지',
 };
