@@ -52,7 +52,16 @@ export default function InstructorCard({ instructor }: { instructor: Instructor 
 
       <div className="mt-4 border-t border-navy-100 pt-4">
         <p className="text-xs font-medium text-navy-400">대표 출강 이력</p>
-        <p className="mt-1 text-sm text-navy-700">{instructor.records.join(' · ')}</p>
+        <ul className="mt-2 flex flex-wrap gap-1.5">
+          {instructor.records.map((r) => (
+            <li
+              key={r}
+              className="rounded border border-navy-100 bg-navy-50/60 px-2 py-1 text-[12.5px] leading-snug text-navy-700"
+            >
+              {r}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
