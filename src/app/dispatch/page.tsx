@@ -6,7 +6,7 @@ import ProcessSteps from '@/components/ProcessSteps';
 import InstructorGrid from '@/components/InstructorGrid';
 import InquiryForm from '@/components/forms/InquiryForm';
 import { dispatchTopics, dispatchAudiences } from '@/data/dispatchTopics';
-import { testimonials } from '@/data/records';
+import ReviewList from '@/components/reviews/ReviewList';
 
 export const metadata: Metadata = {
   title: '강사 출강 (기업 AI 교육)',
@@ -82,23 +82,8 @@ export default function DispatchPage() {
         </div>
       </section>
 
-      {/* 출강 실적·후기 — 실제 후기가 있을 때만 표시 */}
-      {testimonials.length > 0 && (
-      <section className="section">
-        <div className="container-x">
-          <SectionHeading eyebrow="Reviews" title="출강 후기" />
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <figure key={i} className="card h-full">
-                <div className="text-3xl leading-none text-accent">“</div>
-                <blockquote className="mt-2 text-sm leading-relaxed text-navy-700">{t.quote}</blockquote>
-                <figcaption className="mt-4 text-xs font-medium text-navy-400">— {t.author}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
-      )}
+      {/* 출강 후기 — 수강생이 QR로 직접 남긴 후기 (없으면 숨김) */}
+      <ReviewList />
 
       {/* 출강 문의 폼 (최우선 전환) */}
       <section id="inquiry" className="scroll-mt-28 border-t border-navy-100 bg-navy-50/70 py-16 sm:py-20">
