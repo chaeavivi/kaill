@@ -6,7 +6,7 @@ import YouTubeThumb from '@/components/YouTubeThumb';
 import { newsHref, formatDate } from '@/components/home/newsLink';
 import { dispatchTopics } from '@/data/dispatchTopics';
 import { instructors } from '@/data/instructors';
-import { clientLogos } from '@/data/records';
+import { clientLogos, mouPartners } from '@/data/records';
 import { news, type NewsItem } from '@/data/news';
 import { site } from '@/data/site';
 
@@ -25,8 +25,6 @@ const cases = news
   .slice(0, 4);
 const press = news.filter((n) => n.category === '언론보도').sort(byDateDesc);
 
-// 업무협약(MOU) 체결 기관 — news 데이터의 협약 보도 기준
-const MOU_PARTNER = '한국폴리텍대학';
 
 export default function HomePage() {
   return (
@@ -249,26 +247,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. 협력기관 */}
+      {/* 6. 협력기관 — 업무협약 기관 + 출강기관 */}
       <section className="py-16 sm:py-20">
         <div className="container-x">
           <SectionTitle
             eyebrow="PARTNERS"
             title="협력기관"
-            desc="업무협약 기관과, 협회 강사진이 AI 강의·컨설팅을 진행한 기관입니다."
+            desc="협회와 업무협약을 맺은 기관, 그리고 협회 강사진이 AI 교육·컨설팅을 진행한 기관입니다."
           />
-          <ul className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-navy-100 bg-navy-100 sm:grid-cols-4">
+
+          <h3 className="mt-10 text-sm font-bold text-navy-900">업무협약 기관</h3>
+          <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+            {mouPartners.map((p) => (
+              <li
+                key={p.name}
+                className="flex items-center gap-4 rounded-lg border border-accent/40 bg-accent/5 px-5 py-4"
+              >
+                <span className="shrink-0 rounded-full bg-accent px-2.5 py-1 text-[11px] font-bold text-white">MOU</span>
+                <div className="min-w-0">
+                  <div className="text-[15px] font-bold text-navy-950">{p.name}</div>
+                  <div className="mt-0.5 text-xs text-navy-500">
+                    {p.desc} · {p.date}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="mt-10 text-sm font-bold text-navy-900">
+            출강기관 <span className="ml-1 font-medium text-navy-400">{clientLogos.length}곳</span>
+          </h3>
+          <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
             {clientLogos.map((name) => (
               <li
                 key={name}
-                className="relative flex min-h-[88px] flex-col items-center justify-center bg-white px-3 py-5 text-center"
+                className="flex min-h-[64px] items-center justify-center rounded-md border border-navy-100 bg-white px-3 py-3 text-center text-[14px] font-semibold leading-snug text-navy-700 sm:text-[15px]"
               >
-                {name === MOU_PARTNER && (
-                  <span className="mb-1.5 rounded-full bg-accent/10 px-2 py-0.5 text-[10.5px] font-semibold text-accent-dark">
-                    업무협약
-                  </span>
-                )}
-                <span className="text-[15px] font-semibold text-navy-700">{name}</span>
+                {name}
               </li>
             ))}
           </ul>
