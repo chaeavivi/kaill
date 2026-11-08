@@ -28,6 +28,7 @@ export type NewsItem = {
   youtubeWide?: boolean; // 가로형(16:9) 영상이면 true. 기본은 쇼츠(9:16)
   source?: string; // 언론사명 (예: 'KCN뉴스')
   sourceUrl?: string; // 원문 기사 링크 — 있으면 '원문 기사 보기'로 연결
+  hidden?: boolean; // true면 사이트에 노출하지 않음 (내용은 보관)
 };
 
 const NEWS: NewsItem[] = [
@@ -635,6 +636,7 @@ const NEWS: NewsItem[] = [
     excerpt:
       '출강 연계형 AI 강사양성과정 신규 기수를 모집합니다. 수료 후 협회 출강 풀 편입 기회가 제공됩니다.',
     date: '2026-07-01',
+    hidden: true, // 모집 일정 미정으로 숨김 (2026-11). 일정 확정 시 내용 수정 후 해제
   },
   {
     id: 'dispatch-mental-health',
@@ -879,7 +881,7 @@ const NEWS: NewsItem[] = [
 
 // 최신 날짜순(내림차순)으로 정렬해 노출
 // 최신순. 날짜가 없는 항목(날짜 미상)은 최신으로 보고 맨 앞에 둡니다.
-export const news: NewsItem[] = [...NEWS].sort((a, b) => {
+export const news: NewsItem[] = NEWS.filter((n) => !n.hidden).sort((a, b) => {
   const ad = a.date ?? '9999-12-31';
   const bd = b.date ?? '9999-12-31';
   return ad < bd ? 1 : ad > bd ? -1 : 0;

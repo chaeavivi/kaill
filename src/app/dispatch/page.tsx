@@ -82,7 +82,8 @@ export default function DispatchPage() {
         </div>
       </section>
 
-      {/* 출강 실적·후기 */}
+      {/* 출강 실적·후기 — 실제 후기가 있을 때만 표시 */}
+      {testimonials.length > 0 && (
       <section className="section">
         <div className="container-x">
           <SectionHeading eyebrow="Reviews" title="출강 후기" />
@@ -97,6 +98,7 @@ export default function DispatchPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* 출강 문의 폼 (최우선 전환) */}
       <section id="inquiry" className="scroll-mt-28 border-t border-navy-100 bg-navy-50/70 py-16 sm:py-20">

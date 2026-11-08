@@ -28,7 +28,9 @@ export type Testimonial = {
   author: string; // 담당자/소속 (공개 가능 범위)
 };
 
-export const testimonials: Testimonial[] = [
+// ⚠️ 아래는 사이트 제작 시 넣은 '예시' 후기입니다 (실제 후기 아님) — 화면에 노출하지 않습니다.
+// 실제 기관 후기·만족도 결과를 받으면 testimonials 배열에 넣으세요. 비어 있으면 '출강 후기' 영역은 자동으로 숨겨집니다.
+export const exampleTestimonials: Testimonial[] = [
   {
     quote:
       '실무에 바로 쓸 수 있는 내용 위주라 만족도가 높았습니다. 강사 섭외부터 커리큘럼까지 협회가 일임해줘 편했어요.',
@@ -45,3 +47,6 @@ export const testimonials: Testimonial[] = [
     author: '중견기업 C사 경영지원실',
   },
 ];
+
+// 실제 출강 후기 (화면 노출용)
+export const testimonials: Testimonial[] = [];
