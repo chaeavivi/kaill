@@ -8,17 +8,17 @@ export default function HomeHero() {
     <section className="relative">
       <div className="relative isolate overflow-hidden bg-navy-900">
         <Image
-          src="/news/nonghyup-polytech.jpg"
-          alt="한국폴리텍대학 원주캠퍼스 농협 임직원 AI 직무교육 현장"
+          src="/hero/lecture-main.jpg"
+          alt="한국AI평생교육협회 생성형 AI 특강 현장"
           fill
           priority
           sizes="100vw"
-          className="-z-10 object-cover object-center"
+          className="-z-10 object-cover object-[center_62%]"
         />
         {/* 사진 위 남색 그라데이션 — 문구 가독성 확보 */}
         <div
           aria-hidden
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950/90 via-navy-900/75 to-navy-900/30"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950/90 via-navy-900/75 to-navy-900/55 lg:via-navy-900/65 lg:to-navy-900/10"
         />
 
         <div className="container-x pb-28 pt-16 sm:pb-32 sm:pt-20 lg:pb-40 lg:pt-28">
@@ -51,7 +51,7 @@ export default function HomeHero() {
           </div>
 
           <p className="mt-10 text-xs text-navy-300">
-            사진 · 한국폴리텍대학 원주캠퍼스 농협 임직원 AI 직무교육 (2026. 11.)
+            사진 · 협회 생성형 AI 특강 현장
           </p>
         </div>
       </div>
