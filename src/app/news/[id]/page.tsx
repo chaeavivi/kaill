@@ -15,7 +15,17 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { id: string } }): Metadata {
   const item = news.find((n) => n.id === params.id);
   if (!item) return {};
-  return { title: item.title, description: item.excerpt };
+  return {
+    title: item.title,
+    description: item.excerpt,
+    alternates: { canonical: `/news/${item.id}/` },
+    openGraph: {
+      title: item.title,
+      description: item.excerpt,
+      url: `/news/${item.id}/`,
+      ...(item.cover && !item.cover.endsWith('.svg') ? { images: [item.cover] } : {}),
+    },
+  };
 }
 
 const badgeStyle: Record<string, string> = {

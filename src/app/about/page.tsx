@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: '협회 소개',
   description:
     '한국AI평생교육협회의 설립 취지와 미션·비전, 대표 강사진, 연혁을 소개합니다. 검증된 AI 교육 강사를 양성하고 기업·기관에 연결합니다.',
+  alternates: { canonical: '/about/' },
 };
 
 export default function AboutPage() {

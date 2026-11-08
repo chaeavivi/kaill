@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: '강사 출강 (기업 AI 교육)',
   description:
     '검증된 협회 강사를 기업·공공기관·학교에 출강 연계합니다. 생성형 AI 실무, 직무별 AI 활용, 노코드 자동화 등 맞춤 교육을 원스톱으로 제공합니다.',
+  alternates: { canonical: '/dispatch/' },
 };
 
 export default function DispatchPage() {

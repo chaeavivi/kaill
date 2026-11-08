@@ -9,6 +9,9 @@ import { instructors } from '@/data/instructors';
 import { clientLogos, mouPartners } from '@/data/records';
 import { news, type NewsItem } from '@/data/news';
 import { site } from '@/data/site';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 
 // 날짜 내림차순 (날짜 미상 항목은 게시판 맨 뒤)
 const byDateDesc = (a: NewsItem, b: NewsItem) => {

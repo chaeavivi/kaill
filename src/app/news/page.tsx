@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: '소식 · 활동',
   description:
     '한국AI평생교육협회의 공지사항, 출강·활동 소식, AI 평생교육 칼럼을 전합니다.',
+  alternates: { canonical: '/news/' },
 };
 
 export default function NewsPage() {

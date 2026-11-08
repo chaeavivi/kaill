@@ -27,7 +27,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} · ${site.tagline}`,
     description: site.description,
-    url: site.url,
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: site.name }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${site.name} · ${site.tagline}`,
+    description: site.description,
+    images: ['/og.jpg'],
   },
   robots: { index: true, follow: true },
   // 검색엔진 사이트 소유확인 (네이버 서치어드바이저)
@@ -45,6 +51,8 @@ const orgJsonLd = {
   name: site.name,
   description: site.description,
   url: site.url,
+  logo: `${site.url}/logo.png`,
+  image: `${site.url}/og.jpg`,
   ...(site.email ? { email: site.email } : {}),
   ...(site.phone ? { telephone: site.phone } : {}),
   ...(site.address

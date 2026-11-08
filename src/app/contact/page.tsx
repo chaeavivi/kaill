@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: '문의',
   description:
     'B2B 출강 문의, 강사양성과정 문의, 제휴·일반 문의를 받습니다. 담당자가 빠르게 안내드립니다.',
+  alternates: { canonical: '/contact/' },
 };
 
 export default function ContactPage() {

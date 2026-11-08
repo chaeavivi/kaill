@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: 'AI 강사양성과정',
   description:
     '출강으로 이어지는 AI 강사양성과정. 생성형 AI 이해부터 강의 설계·데모 강의까지, 수료 후 협회 출강 풀 연계 기회를 제공합니다.',
+  alternates: { canonical: '/training/' },
 };
 
 // Course 구조화 데이터
