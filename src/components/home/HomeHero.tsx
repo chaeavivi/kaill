@@ -30,7 +30,7 @@ export default function HomeHero() {
           <h1 className="mt-4 max-w-2xl text-[32px] font-bold leading-[1.28] tracking-tight text-white sm:text-[42px] lg:text-[52px]">
             AI 교육의 기준을
             <br />
-            만드는 강사들
+            만드는 협회
           </h1>
 
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-navy-100 sm:text-base">
