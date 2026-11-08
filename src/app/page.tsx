@@ -275,7 +275,7 @@ export default function HomePage() {
           </ul>
 
           <h3 className="mt-10 text-sm font-bold text-navy-900">
-            출강기관 <span className="ml-1 font-medium text-navy-400">{clientLogos.length}곳</span>
+            출강기관 <span className="ml-1 font-medium text-navy-400">{clientLogos.length}곳 외 다수</span>
           </h3>
           <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
             {clientLogos.map((name) => (
@@ -286,6 +286,9 @@ export default function HomePage() {
                 {name}
               </li>
             ))}
+            <li className="flex min-h-[64px] items-center justify-center rounded-md border border-dashed border-navy-200 bg-navy-50/60 px-3 py-3 text-center text-[14px] font-medium text-navy-500 sm:text-[15px]">
+              외 다수 기관
+            </li>
           </ul>
         </div>
       </section>
