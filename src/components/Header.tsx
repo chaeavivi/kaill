@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -24,9 +25,7 @@ export default function Header() {
       <div className="container-x flex h-16 items-center justify-between gap-4">
         {/* 로고 */}
         <Link href="/" className="flex items-center gap-2" aria-label={`${site.name} 홈`}>
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-navy-900 text-sm font-bold text-accent">
-            AI
-          </span>
+          <Image src="/logo.png" alt="" width={43} height={36} priority />
           <span className="text-[15px] font-bold leading-tight text-navy-950 sm:text-base">
             {site.name}
           </span>
