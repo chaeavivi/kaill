@@ -47,7 +47,8 @@ const sameAs = Object.values(site.social).filter(Boolean);
 
 const orgJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'EducationalOrganization',
+  alternateName: 'KAILEA',
   name: site.name,
   description: site.description,
   url: site.url,

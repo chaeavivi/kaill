@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import PageHero from '@/components/PageHero';
 import ContactTabs from '@/components/ContactTabs';
@@ -21,6 +22,13 @@ export default function ContactPage() {
 
       <section className="section">
         <div className="container-x">
+          <p className="mb-8 rounded-lg border border-navy-100 bg-navy-50/70 px-5 py-4 text-sm text-navy-600">
+            문의 전에{' '}
+            <Link href="/faq/" className="font-semibold text-accent-dark underline">
+              자주 묻는 질문
+            </Link>
+            을 먼저 확인해 보세요. 출강 지역·비용·온라인 교육 등의 답이 정리되어 있습니다.
+          </p>
           <ContactTabs />
 
           {/* 협회 정보 */}

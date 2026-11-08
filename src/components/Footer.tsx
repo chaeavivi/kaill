@@ -19,6 +19,11 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/faq/" className="text-navy-700 transition hover:text-accent-dark">
+                자주 묻는 질문
+              </Link>
+            </li>
           </ul>
           <SocialLinks variant="header" />
         </div>

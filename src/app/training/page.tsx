@@ -6,7 +6,6 @@ import TrainingForm from '@/components/forms/TrainingForm';
 import JsonLd from '@/components/JsonLd';
 import { trainingOverview, curriculum, careerPaths, admission } from '@/data/training';
 import { site } from '@/data/site';
-import { faqs } from '@/data/faq';
 
 export const metadata: Metadata = {
   title: 'AI 강사양성과정',
@@ -23,28 +22,16 @@ const courseJsonLd = {
   description:
     '생성형 AI 이해부터 강의 설계·데모 강의까지, 출강으로 이어지는 실무형 AI 강사 양성 과정.',
   provider: {
-    '@type': 'Organization',
+    '@type': 'EducationalOrganization',
     name: site.name,
     sameAs: site.url,
   },
-};
-
-// FAQPage 구조화 데이터
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
-  })),
 };
 
 export default function TrainingPage() {
   return (
     <>
       <JsonLd data={courseJsonLd} />
-      <JsonLd data={faqJsonLd} />
 
       <PageHero
         eyebrow="Training"

@@ -64,6 +64,13 @@ export default function HomePage() {
                 {site.email && <div className="mt-1 text-sm text-navy-500">{site.email}</div>}
               </div>
             )}
+            <Link
+              href="/faq/"
+              className="mt-3 flex items-center justify-between rounded-lg border border-navy-100 bg-white px-5 py-3.5 text-sm font-semibold text-navy-800 transition hover:border-accent/60"
+            >
+              자주 묻는 질문
+              <span aria-hidden className="text-accent-dark">→</span>
+            </Link>
           </aside>
         </div>
       </section>
