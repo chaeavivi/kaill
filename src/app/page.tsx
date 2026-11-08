@@ -122,10 +122,10 @@ export default function HomePage() {
           </div>
 
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {instructors.map((ins) => (
+            {instructors.map((ins, i) => (
               <li
                 key={ins.name}
-                className="flex flex-col rounded-lg border border-navy-100 bg-white p-5 transition hover:border-accent/50 hover:shadow-card"
+                className={`flex flex-col rounded-lg border bg-white p-5 ${i === 0 ? 'border-accent/40 shadow-card' : 'border-navy-100'} transition hover:border-accent/50 hover:shadow-card`}
               >
                 <div className="flex items-center gap-3.5">
                   {ins.photo ? (
@@ -153,8 +153,13 @@ export default function HomePage() {
                   <p className="line-clamp-3 text-sm leading-relaxed text-navy-500">{ins.bio}</p>
                 </div>
                 <ul className="mt-4 flex flex-wrap gap-1.5 border-t border-navy-100 pt-4">
-                  {ins.expertise.slice(0, 3).map((e) => (
-                    <li key={e} className="rounded-full bg-navy-50 px-2.5 py-0.5 text-[11.5px] text-navy-600">
+                  {ins.expertise.slice(0, i === 0 ? 6 : 3).map((e) => (
+                    <li
+                      key={e}
+                      className={`rounded-full px-2.5 py-0.5 text-[11.5px] ${
+                        i === 0 ? 'bg-accent/10 font-medium text-accent-dark' : 'bg-navy-50 text-navy-600'
+                      }`}
+                    >
                       {e}
                     </li>
                   ))}

@@ -14,7 +14,7 @@ export const instructors: Instructor[] = [
   {
     name: '정경',
     role: '협회장 · AI 마케팅 실전 운영자',
-    expertise: ['AI 마케팅', 'AI 직무 활용', 'AI 콘텐츠 제작', 'AI 창업·소상공인', 'AEO·검색노출'],
+    expertise: ['AI 경영컨설팅', 'AI 마케팅', 'AEO·검색노출', '병원·의료 마케팅', 'AI 창업·소상공인', 'AI 직무 활용'],
     bio: '6개 기업의 AI 마케팅을 매일 직접 운영하는 실전 운영자. 강의에서 다루는 프롬프트·자동화는 모두 오늘도 현장에서 돌아가는 것들입니다.',
     highlights: [
       '바스제로 컨설팅 대표 · AI 마케팅 전문',
