@@ -121,38 +121,44 @@ export default function HomePage() {
             <MoreLink href="/about/" label="강사진 자세히" />
           </div>
 
-          <ul className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-5 lg:grid-cols-4">
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {instructors.map((ins) => (
-              <li key={ins.name} className="flex flex-col">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-navy-100">
+              <li
+                key={ins.name}
+                className="flex flex-col rounded-lg border border-navy-100 bg-white p-5 transition hover:border-accent/50 hover:shadow-card"
+              >
+                <div className="flex items-center gap-3.5">
                   {ins.photo ? (
                     <Image
                       src={ins.photo}
                       alt={`${ins.name} ${ins.role}`}
-                      fill
-                      sizes="(max-width: 1024px) 50vw, 260px"
-                      className="object-cover"
+                      width={56}
+                      height={56}
+                      className="h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-accent/30"
                     />
                   ) : (
-                    <Monogram name={ins.name} />
+                    <span
+                      aria-hidden
+                      className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-navy-50 text-xl font-bold text-navy-800 ring-2 ring-accent/30"
+                    >
+                      {ins.name.slice(0, 1)}
+                    </span>
                   )}
-                </div>
-                <div className="mt-4">
-                  <div className="flex items-baseline gap-2">
+                  <div className="min-w-0">
                     <h3 className="text-lg font-bold text-navy-950">{ins.name}</h3>
+                    <p className="text-[13px] font-medium leading-snug text-accent-dark">{ins.role}</p>
                   </div>
-                  <p className="mt-0.5 text-[13px] font-medium leading-snug text-accent-dark">{ins.role}</p>
-                  <ul className="mt-3 flex flex-wrap gap-1.5">
-                    {ins.expertise.slice(0, 3).map((e) => (
-                      <li
-                        key={e}
-                        className="rounded-full border border-navy-200 px-2.5 py-0.5 text-[11.5px] text-navy-600"
-                      >
-                        {e}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
+                <div className="mt-4 flex-1">
+                  <p className="line-clamp-3 text-sm leading-relaxed text-navy-500">{ins.bio}</p>
+                </div>
+                <ul className="mt-4 flex flex-wrap gap-1.5 border-t border-navy-100 pt-4">
+                  {ins.expertise.slice(0, 3).map((e) => (
+                    <li key={e} className="rounded-full bg-navy-50 px-2.5 py-0.5 text-[11.5px] text-navy-600">
+                      {e}
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>
@@ -381,25 +387,5 @@ function ContactCard({
         <span className="mt-4 text-sm font-semibold">바로가기 →</span>
       </Link>
     </li>
-  );
-}
-
-// 프로필 사진이 아직 없는 강사 — 빈칸 대신 협회 색으로 만든 이름 표지
-function Monogram({ name }: { name: string }) {
-  return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-navy-50 to-navy-100">
-      <div
-        aria-hidden
-        className="absolute inset-0 opacity-50"
-        style={{
-          backgroundImage: 'radial-gradient(#c3d2e5 1px, transparent 1px)',
-          backgroundSize: '14px 14px',
-        }}
-      />
-      <span className="relative grid h-20 w-20 place-items-center rounded-full bg-white text-3xl font-bold text-navy-800 shadow-card ring-1 ring-navy-100 sm:h-24 sm:w-24 sm:text-4xl">
-        {name.slice(0, 1)}
-      </span>
-      <span className="relative mt-4 h-0.5 w-6 bg-accent" aria-hidden />
-    </div>
   );
 }
