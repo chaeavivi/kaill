@@ -42,4 +42,4 @@ export const CERT_DISCLAIMER =
 // 비워두면(''): 후기 영역은 숨겨지고, 후기 작성 페이지는 '준비 중'으로 표시됩니다.
 // 설정 방법: docs/후기-구글연동-설정.md
 // ─────────────────────────────────────────────────────────────────────────
-export const REVIEW_ENDPOINT = '';
+export const REVIEW_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzGB3zJQxcfletJtsjzTGeC6ffQpln_tOguIO_TsUc8pDGyntdnInfW08DSYvKvjMOj/exec';
