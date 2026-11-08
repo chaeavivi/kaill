@@ -32,6 +32,37 @@ export type NewsItem = {
 
 const NEWS: NewsItem[] = [
   {
+    id: 'dispatch-nonghyup-polytech',
+    category: '출강소식',
+    title: '한국폴리텍대학 원주캠퍼스와 함께한 농협 임직원 AI 직무교육',
+    deck: '〈ChatGPT 활용 빅데이터 실무〉 3일 15시간 과정',
+    excerpt:
+      '한국폴리텍대학 원주캠퍼스와 함께 농협 임직원 12명을 대상으로 〈ChatGPT 활용 빅데이터 실무〉 과정을 3일 15시간 동안 진행했습니다.',
+    date: '2026-11-03',
+    dateLabel: '2026-11-03 ~ 05',
+    author: '한국AI평생교육협회',
+    cover: '/news/nonghyup-polytech.jpg',
+    coverCaption: '한국폴리텍대학 원주캠퍼스 농협 임직원 AI 직무교육 현장',
+    body: [
+      {
+        type: 'lead',
+        text: '한국AI평생교육협회는 한국폴리텍대학 원주캠퍼스와 함께 농협 임직원 12명을 대상으로 〈ChatGPT 활용 빅데이터 실무〉 과정을 진행했습니다. 협회 강사진이 3일 동안 하루 5시간씩, 모두 15시간 동안 현업에 바로 적용할 수 있는 실습 중심으로 운영했습니다.',
+      },
+      {
+        type: 'para',
+        text: '첫째·둘째 날에는 ChatGPT로 엑셀 데이터를 정리하고 분석하는 실습과 데이터 실무 실습을 진행했고, 마지막 날에는 Claude로 나만의 업무 스킬을 만들고 Gemini 캔버스로 업무용 앱을 직접 만들어 웹에 발행하는 실습까지 이어 갔습니다.',
+      },
+      {
+        type: 'para',
+        text: '모든 실습은 ChatGPT, Gemini, Claude의 무료 계정만으로 구성해, 교육이 끝난 뒤에도 별도 비용 없이 업무에 그대로 쓸 수 있도록 했습니다.',
+      },
+      {
+        type: 'cta',
+        text: '기업·기관 맞춤 AI 직무교육이 필요한 곳은 한국AI평생교육협회로 문의 주세요.',
+      },
+    ],
+  },
+  {
     id: 'video-genai-work-innovation',
     category: '출강소식',
     title: '생성형 AI 활용 업무혁신 심화교육 | 문서 자동화부터 앱 만들기까지',
