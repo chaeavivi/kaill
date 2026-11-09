@@ -10,7 +10,7 @@ export const site = {
   // 연락처 — 값이 있으면 푸터·문의 페이지·구조화 데이터에 자동 노출됩니다.
   phone: '010-9727-6345' as string,
   email: 'kaileakr@gmail.com' as string,
-  address: '강원특별자치도 원주시 입춘로 45, A동 6층' as string,
+  address: '강원특별자치도 원주시 입춘로 45, A동 609호' as string,
   // 사이트 배포 후 실제 도메인으로 교체 (JSON-LD·OG에 사용)
   url: 'https://www.kailea.kr',
   // SNS 채널 — 값이 있으면 헤더·푸터에 자동 노출됩니다. (빈 값은 숨김)
