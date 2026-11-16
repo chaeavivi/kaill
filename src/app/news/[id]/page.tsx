@@ -57,6 +57,13 @@ function Block({ block }: { block: NewsBlock }) {
           {block.text}
         </div>
       );
+    case 'image':
+      return (
+        <figure className="my-7">
+          <Image src={block.src} alt={block.caption ?? ''} width={1400} height={933} className="h-auto w-full rounded-xl" />
+          {block.caption && <figcaption className="mt-2 text-center text-xs text-navy-400">{block.caption}</figcaption>}
+        </figure>
+      );
     default:
       return <p className="mb-5 leading-[1.9] text-navy-700">{block.text}</p>;
   }

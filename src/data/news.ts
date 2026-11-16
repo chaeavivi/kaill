@@ -9,7 +9,8 @@ export type NewsBlock =
   | { type: 'lead'; text: string }
   | { type: 'heading'; text: string }
   | { type: 'quote'; text: string }
-  | { type: 'cta'; text: string };
+  | { type: 'cta'; text: string }
+  | { type: 'image'; src: string; caption?: string };
 
 export type NewsItem = {
   id: string;
@@ -42,7 +43,7 @@ const NEWS: NewsItem[] = [
     date: '2026-11-11',
     author: '한국AI평생교육협회',
     cover: '/news/sci-canva-2026.jpg',
-    coverCaption: '2026 하반기 척수장애인단체 실무자연수 강의 현장',
+    coverCaption: '2026 하반기 척수장애인단체 실무자연수 강의 현장 (화면은 흐림 처리)',
     body: [
       {
         type: 'lead',
@@ -52,6 +53,7 @@ const NEWS: NewsItem[] = [
         type: 'para',
         text: '이번 강의는 전국 지부와 단체에서 홍보 업무를 맡고 있는 실무자분들을 대상으로 했습니다. 디자이너 없이도 단체 홍보물을 직접 만들 수 있도록 AI와 캔바(Canva) 활용법을 실습 위주로 진행했습니다.',
       },
+      { type: 'image', src: '/news/sci-canva-2026-speaker.jpg', caption: '강의를 진행하는 정경 협회장' },
       { type: 'heading', text: '설치부터 함께, 실무에 많이 쓰는 홍보물 네 가지' },
       {
         type: 'para',
@@ -66,10 +68,15 @@ const NEWS: NewsItem[] = [
         text: '템플릿을 고른 뒤 캔바 AI로 문구와 색상을 바꾸는 과정은 실제 편집 화면으로 시연했습니다. 휴대폰으로 할 수 있는 작업과 사무실 컴퓨터에서 마무리해야 하는 작업도 나눠서 짚어, 현장에서 바로 쓰실 수 있도록 구성했습니다.',
       },
       { type: 'heading', text: '현장 분위기' },
+      { type: 'image', src: '/news/sci-canva-2026-practice1.jpg', caption: '각자 휴대폰으로 캔바를 따라 해 보는 실무자분들' },
+
       {
         type: 'para',
         text: '참여하신 실무자분들은 강의 내내 각자 휴대폰으로 화면을 따라 하며 직접 홍보물을 만들어 보셨습니다.',
       },
+      { type: 'image', src: '/news/sci-canva-2026-phone.jpg', caption: '휴대폰 캔바 앱으로 직접 편집하는 모습' },
+      { type: 'image', src: '/news/sci-canva-2026-practice2.jpg', caption: '테이블마다 함께 실습하는 모습' },
+
       {
         type: 'cta',
         text: '한국AI평생교육협회는 기관과 단체의 실제 업무에 맞춘 AI 실무 교육을 진행합니다. 홍보물 제작, 문서 작성, 업무 효율화 등 기관에 필요한 주제로 맞춤 교육을 구성해 드립니다. 교육 문의 010-9727-6345',
