@@ -40,8 +40,8 @@ const NEWS: NewsItem[] = [
     deck: '사업하는 대표님들과 함께한 소규모 실습형 AI 마케팅 특강',
     excerpt:
       '원주 여성사업가 모임에서 대표님들을 대상으로 스레드(Threads)와 AI를 활용한 수익화 마케팅 특강을 진행했습니다. 각자 노트북으로 바로 따라 하는 실습형으로 구성했습니다.',
-    date: '2026-01-20',
-    dateLabel: '2026년 1월',
+    date: '2026-02-15',
+    dateLabel: '2026년 2월',
     author: '한국AI평생교육협회',
     cover: '/news/womenceo-ai-2026.jpg',
     coverCaption: '원주 여성사업가 모임 AI 특강 현장',
