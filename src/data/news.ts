@@ -34,6 +34,45 @@ export type NewsItem = {
 
 const NEWS: NewsItem[] = [
   {
+    id: 'dispatch-womenceo-threads-2026',
+    category: '출강소식',
+    title: '원주 여성사업가 모임 AI 특강 「자영업자 생존 치트키, 스레드 수익화 마케팅」',
+    deck: '사업하는 대표님들과 함께한 소규모 실습형 AI 마케팅 특강',
+    excerpt:
+      '원주 여성사업가 모임에서 대표님들을 대상으로 스레드(Threads)와 AI를 활용한 수익화 마케팅 특강을 진행했습니다. 각자 노트북으로 바로 따라 하는 실습형으로 구성했습니다.',
+    date: '2026-01-20',
+    dateLabel: '2026년 1월',
+    author: '한국AI평생교육협회',
+    cover: '/news/womenceo-ai-2026.jpg',
+    coverCaption: '원주 여성사업가 모임 AI 특강 현장',
+    body: [
+      {
+        type: 'lead',
+        text: '한국AI평생교육협회 정경 협회장이 원주 여성사업가 모임에서 「자영업자 생존 치트키, 스레드 수익화 마케팅」을 주제로 AI 특강을 진행했습니다.',
+      },
+      {
+        type: 'para',
+        text: '가게와 회사를 직접 꾸려 가는 대표님들이 모인 자리였던 만큼, 강의는 이론보다 내 사업에 바로 써먹을 수 있는 방법에 맞췄습니다. 스레드(Threads)를 홍보 채널로 활용하는 방법과, 대표님 한 사람이 매일 글을 이어 갈 수 있도록 AI를 곁에 두는 방법을 함께 다뤘습니다.',
+      },
+      { type: 'image', src: '/news/womenceo-ai-2026-lecture.jpg', caption: '스레드 수익화 마케팅을 주제로 강의하는 정경 협회장' },
+      { type: 'heading', text: '각자 노트북으로 바로 따라 하는 실습' },
+      {
+        type: 'para',
+        text: '소규모 모임이라 참석하신 대표님들이 각자 노트북을 펴고 화면을 따라 하며 직접 설정해 보는 방식으로 진행했습니다. 막히는 부분은 자리마다 찾아가 하나씩 함께 짚어 드렸습니다.',
+      },
+      { type: 'image', src: '/news/womenceo-ai-2026-coaching.jpg', caption: '자리마다 찾아가 함께 짚어 보는 1:1 실습' },
+      {
+        type: 'para',
+        text: '강의를 마칠 때쯤에는 대표님들이 각자 사업에 맞는 글감과 운영 방향을 하나씩 정리해 가셨습니다.',
+      },
+      { type: 'image', src: '/news/womenceo-ai-2026-slide.jpg', caption: '「자영업자 생존 치트키, 스레드 수익화 마케팅」 강의 자료' },
+      {
+        type: 'cta',
+        text: '한국AI평생교육협회는 소상공인·자영업자 모임과 기관을 위한 AI 마케팅 실무 특강을 진행합니다. 스레드·블로그·인스타그램 등 채널별 맞춤 구성도 가능합니다. 교육 문의 010-9727-6345',
+      },
+    ],
+  },
+  {
     id: 'dispatch-sci-canva-2026',
     category: '출강소식',
     title: '2026 하반기 척수장애인단체 실무자연수 출강 「AI와 캔바로 단체 홍보물 직접 만들기」',
