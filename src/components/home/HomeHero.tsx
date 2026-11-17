@@ -28,7 +28,7 @@ export default function HomeHero() {
           </div>
 
           <h1 className="mt-4 max-w-2xl text-[32px] font-bold leading-[1.28] tracking-tight text-white sm:text-[42px] lg:text-[52px]">
-            <span className="sr-only">한국AI평생교육협회 — 전국 출강 AI 강사 협회. </span>
+            <span className="sr-only">한국AI평생교육협회 — 강원 원주 AI 교육 협회, 전국 AI 강사 출강. </span>
             AI 교육의 기준을
             <br />
             만드는 협회

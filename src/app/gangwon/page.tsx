@@ -44,7 +44,7 @@ export default function GangwonPage() {
       <PageHero
         eyebrow="Gangwon"
         title="원주·강원 AI 교육"
-        desc="한국AI평생교육협회는 강원 원주에 본부를 두고 전국에 출강합니다. 강원 지역 기관의 AI 교육과 AI 강사 섭외를 가까이에서 돕습니다."
+        desc="한국AI평생교육협회는 강원 원주에 본부를 두고, 협회 강사진이 전국에 출강합니다. 강원 지역 기관의 AI 교육과 AI 강사 섭외를 가까이에서 돕습니다."
       />
 
       <section className="section">

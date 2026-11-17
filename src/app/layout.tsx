@@ -6,10 +6,10 @@ import MobileCTA from '@/components/MobileCTA';
 import JsonLd from '@/components/JsonLd';
 import { site } from '@/data/site';
 
-// 메인(홈) 검색 제목 — 'AI 강사'·'AI 협회' 검색어를 앞쪽에 배치
-const homeTitle = `${site.name}(KAILEA) | 전국 출강 AI 강사 섭외·기업·공공기관 AI 교육`;
+// 메인(홈) 검색 제목 — 강원 원주 중심 + 협회 강사진 전국 출강
+const homeTitle = `${site.name}(KAILEA) | 강원 원주 AI 교육 협회 · 전국 AI 강사 출강`;
 const homeDescription =
-  '한국AI평생교육협회(KAILEA)는 전국 기업·공공기관·복지기관·학교에 검증된 AI 강사를 출강 연계하는 AI 교육 협회입니다. 생성형 AI 실무교육, 직무별 AI 활용 교육, AI 강사 양성과정을 운영합니다. 본부 강원 원주.';
+  '한국AI평생교육협회(KAILEA)는 강원 원주에 본부를 둔 AI 교육 협회입니다. 강원 지역 공공기관·기업·복지기관·소상공인 생성형 AI 실무교육을 중심으로, 협회 강사진이 전국 어디든 출강합니다. AI 강사 양성과정도 운영합니다.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     'AI 협회',
     'AI 강사 협회',
     'AI 강사 섭외',
+    '강원 AI 교육 협회',
     'AI 강사 출강',
     'AI 교육 강사 섭외',
     '기업 AI 교육',
