@@ -6,33 +6,45 @@ import MobileCTA from '@/components/MobileCTA';
 import JsonLd from '@/components/JsonLd';
 import { site } from '@/data/site';
 
+// 메인(홈) 검색 제목 — 'AI 강사'·'AI 협회' 검색어를 앞쪽에 배치
+const homeTitle = `${site.name}(KAILEA) | 전국 출강 AI 강사 섭외·기업·공공기관 AI 교육`;
+const homeDescription =
+  '한국AI평생교육협회(KAILEA)는 전국 기업·공공기관·복지기관·학교에 검증된 AI 강사를 출강 연계하는 AI 교육 협회입니다. 생성형 AI 실무교육, 직무별 AI 활용 교육, AI 강사 양성과정을 운영합니다. 본부 강원 원주.';
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} · ${site.tagline}`,
+    default: homeTitle,
     template: `%s · ${site.name}`,
   },
-  description: site.description,
+  description: homeDescription,
   keywords: [
+    'AI 강사',
+    'AI 협회',
+    'AI 강사 협회',
+    'AI 강사 섭외',
     'AI 강사 출강',
     'AI 교육 강사 섭외',
     '기업 AI 교육',
     '생성형 AI 강의',
     'AI 강사양성과정',
     'AI 평생교육',
+    '공공기관 AI 교육',
+    '원주 AI 교육',
+    '강원 AI 강사',
   ],
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
     siteName: site.name,
-    title: `${site.name} · ${site.tagline}`,
-    description: site.description,
+    title: homeTitle,
+    description: homeDescription,
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: site.name }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${site.name} · ${site.tagline}`,
-    description: site.description,
+    title: homeTitle,
+    description: homeDescription,
     images: ['/og.jpg'],
   },
   robots: { index: true, follow: true },
@@ -53,6 +65,9 @@ const orgJsonLd = {
   description: site.description,
   url: site.url,
   logo: `${site.url}/logo.png`,
+  // 활동 지역: 전국 출강 / 본부: 강원 원주
+  areaServed: { '@type': 'Country', name: '대한민국' },
+  knowsAbout: ['AI 교육', '생성형 AI 실무교육', 'AI 강사 양성', 'AI 리터러시', '평생교육'],
   image: `${site.url}/og.jpg`,
   ...(site.email ? { email: site.email } : {}),
   ...(site.phone ? { telephone: site.phone } : {}),
@@ -61,6 +76,8 @@ const orgJsonLd = {
         address: {
           '@type': 'PostalAddress',
           addressCountry: 'KR',
+          addressRegion: '강원특별자치도',
+          addressLocality: '원주시',
           streetAddress: site.address,
         },
       }

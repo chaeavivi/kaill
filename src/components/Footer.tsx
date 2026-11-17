@@ -24,6 +24,11 @@ export default function Footer() {
                 자주 묻는 질문
               </Link>
             </li>
+            <li>
+              <Link href="/gangwon/" className="text-navy-700 transition hover:text-accent-dark">
+                원주·강원 AI 교육
+              </Link>
+            </li>
           </ul>
           <SocialLinks variant="header" />
         </div>
@@ -34,7 +39,7 @@ export default function Footer() {
           <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
             {/* 협회 로고·이름 */}
             <div className="flex items-center gap-3">
-              <Image src="/logo.png" alt="" width={43} height={36} />
+              <Image src="/logo.png" alt="한국AI평생교육협회 로고" width={43} height={36} />
               <div className="leading-tight">
                 <div className="text-base font-bold text-navy-950">{site.name}</div>
                 <div className="mt-0.5 text-[10px] font-medium tracking-[0.12em] text-navy-400">

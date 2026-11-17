@@ -48,7 +48,7 @@ export default function Header() {
         <div className="container-x flex h-16 items-center justify-between gap-4 lg:h-[76px]">
           {/* 로고 */}
           <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label={`${site.name} 홈`}>
-            <Image src="/logo.png" alt="" width={43} height={36} priority />
+            <Image src="/logo.png" alt="한국AI평생교육협회 로고" width={43} height={36} priority />
             <span className="flex flex-col leading-tight">
               <span className="text-[15px] font-bold text-navy-950 sm:text-[17px]">{site.name}</span>
               <span className="hidden text-[9.5px] font-medium tracking-[0.12em] text-navy-400 sm:block">

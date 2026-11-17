@@ -15,7 +15,7 @@ export default function ReviewPage() {
     <section className="bg-navy-50/70 py-10 sm:py-16">
       <div className="mx-auto w-full max-w-lg px-5">
         <div className="text-center">
-          <Image src="/logo.png" alt="" width={52} height={44} className="mx-auto" />
+          <Image src="/logo.png" alt="한국AI평생교육협회 로고" width={52} height={44} className="mx-auto" />
           <p className="mt-3 text-xs font-bold tracking-[0.16em] text-accent-dark">REVIEW</p>
           <h1 className="mt-1 text-2xl font-bold tracking-tight text-navy-950 sm:text-[28px]">강의 후기 남기기</h1>
           <p className="mt-2 text-sm leading-relaxed text-navy-500">

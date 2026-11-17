@@ -8,9 +8,9 @@ import { trainingOverview, curriculum, careerPaths, admission } from '@/data/tra
 import { site } from '@/data/site';
 
 export const metadata: Metadata = {
-  title: 'AI 강사양성과정',
+  title: 'AI 강사 양성과정 | 수료 후 협회 출강 연계',
   description:
-    '출강으로 이어지는 AI 강사양성과정. 생성형 AI 이해부터 강의 설계·데모 강의까지, 수료 후 협회 출강 풀 연계 기회를 제공합니다.',
+    'AI 강사가 되고 싶다면, 출강으로 이어지는 AI 강사양성과정. 생성형 AI 이해부터 강의 설계·데모 강의까지, 수료 후 협회 출강 풀 연계 기회를 제공합니다.',
   alternates: { canonical: '/training/' },
 };
 
